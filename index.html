@@ -1,7 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=1-20-26.html">
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="1-20-26.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4caf50">
+  <script defer src="1-20-26.js"></script>
 </head>
-<body></body>
-</html>
+<body>
+
+<!-- ABOUT APP MODAL -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content about-content">
+    <h2>About This App</h2>
+    <p>This is a simple Todo & Level Progress App designed for productivity and fun learning.</p>
+    <h3>Download</h3>
+    <p><a href="download-link" target="_blank">Click here to download</a></p>
+    <h3>Latest Version</h3>
+    <p>Version 1.0 (January 2026)</p>
+    <h3>More Info</h3>
+    <p>You can track your tasks, level up, customize your profile, and toggle themes.</p>
+    <button id="aboutClose">Close</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <button id="menuBtn">☰</button>
+  <div class="profile" id="profileBtn">
+    <img id="headerAvatar" src="default-avatar.png" alt="avatar">
+    <span id="headerUsername">User</span>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <h1>My App</h1>
+  <p id="settingsItem">Settings</p>
+  <p id="aboutItem">About App</p>
+  <p id="themeToggle">Mode</p>
+  <p>Version 1.0</p>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+  <!-- PROGRESS -->
+  <div class="progress-container">
+    <div id="progressBar"></div>
+  </div>
+  <p id="levelText">Level 1</p>
+
+  <!-- TODO INPUT -->
+  <div class="todo-input">
+    <input id="taskInput" type="text" placeholder="Enter task">
+    <button id="addTask">Add</button>
+  </div>
+
+  <!-- TASK LIST -->
+  <ul id="taskList"></ul>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span id="homeBtn">🏠</span>
+
+  <!-- CUSTOM CONFIRM MODAL -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to exit the main layout and go to the coding interface?</p>
+      <div class="modal-buttons">
+        <button id="confirmOk">OK</button>
+        <button id="confirmCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <span id="searchBtn">🔍</span>
+  <input type="text" id="searchInput" placeholder="Type your query..." style="display:none;">
+  <span>📊</span>
+  <span id="footerProfileBtn">👤</span>
+</footer>
+
+<div id="levelUpToast">LEVEL UP!</div>
+
+</body>
+    </html>
